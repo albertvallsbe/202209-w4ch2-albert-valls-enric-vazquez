@@ -20,7 +20,7 @@ const App = () => {
           <UsedLetters usedLetters={usedLetters} />
           <Hangman />
         </div>
-        <GuessLetters />
+        <GuessLetters guessedLetters={guessedLetters} />
         <Result />
         <Letters />
       </div>
