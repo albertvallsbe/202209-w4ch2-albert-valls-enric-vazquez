@@ -46,13 +46,13 @@
 
 - The received action on click
 
-## HiddenWord
+## GessLetters
 
 ### Show Data
 
 - Display the total number of letters from hidden word in underscores
 
-## Info
+## Result
 
 ### Show Data
 
