@@ -4,15 +4,12 @@ import Hangman from "./components/Hangman/Hangman";
 import Letters from "./components/Letters/Letters";
 import Result from "./components/Result/Result";
 import UsedLetters from "./components/UsedLetters/UsedLetters";
-import arrayWords from "./data/randomWords";
+import getGuessWord from "./data/getGuessWord";
 
 const App = () => {
-  const guessedWord = arrayWords[Math.floor(Math.random() * arrayWords.length)];
-  const guessedLetters = guessedWord.split("").map((letter) => {
-    return { letter, hidden: true };
-  });
-
+  const [guessLetters] = useState(getGuessWord());
   const [usedLetters] = useState([]);
+
   return (
     <>
       <div className="container">
@@ -20,7 +17,7 @@ const App = () => {
           <UsedLetters usedLetters={usedLetters} />
           <Hangman />
         </div>
-        <GuessLetters guessedLetters={guessedLetters} />
+        <GuessLetters guessLetters={guessLetters} />
         <Result />
         <Letters />
       </div>
